@@ -68,6 +68,7 @@ public:
 	int Save(std::string filename) const;
 	// Public method to compare the final image with a reference
 	std::vector<byte3> GetFrameBuffer() const { return frame_buffer; }
+	const int CHANNEL_NUM = 3;
 protected:
 	void SetPixel(const unsigned short x, const unsigned short y, const float3 color);
 	virtual Payload TraceRay(const Ray& ray, const unsigned int max_raytrace_depth) const;
